@@ -505,6 +505,12 @@ form button{
     .nav-links ul li:not(:last-child){
         margin-right: 0;
     }
+    
+    .nav-links ul li a{
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
 
     .nav-links ul li a:hover, #active{
         border-bottom: none;
