@@ -495,10 +495,11 @@ form button{
         text-align: center;
         background-color: #000;
         display: none;
+        height: 100vh; /* Changed */
     }
 
-    .nav-links ul li{
-        margin: 1.5rem 0;
+    .nav-links ul li{  
+        margin: 2rem 0;  /* Changed */
     }
 
     .nav-links ul li:not(:last-child){
