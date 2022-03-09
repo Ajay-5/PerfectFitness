@@ -27,7 +27,7 @@ p, a{
     color: rgb(251,99,0);
 }
 
-/* Nav */
+/* Nav for desktop */
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -65,11 +65,8 @@ p, a{
     border-bottom: 2px solid rgb(251,99,0);
 }
 
-.toggle-btn{
-    color: #000;
-    font-size: 25px;
-    font-weight: bold;
-    padding: .4rem 0 0 0;
+/* Nav for mobile */
+.mobile-nav{
     display: none;
 }
 
@@ -326,7 +323,6 @@ p, a{
 .pricing h1{
     color: #fff;
     letter-spacing: 1px;
-    letter-spacing: 2px;
     font-size: 2.5rem;
     text-align: center;
     padding-bottom: 1rem;
@@ -470,9 +466,13 @@ form button{
     /* Call */
     .call{
         padding: 1rem 0;
+        position: absolute;
+        top: 4.3rem;
+        left: 0;
+        right: 0;
     }
 
-    /* Nav */
+    /* Nav*/
     .nav-bar{
         padding: .5rem 1rem;
         background: rgb(251,99,0);
@@ -484,64 +484,85 @@ form button{
         margin-left: 0;
     }
 
+    /* Nav for desktop */
     .nav-links{
-        position: absolute;
-        top: 4.2rem;
-        left: 0;
-        right: 0;
-    }
-
-    .nav-links ul{
-        text-align: center;
-        background-color: #000;
         display: none;
-        height: 100vh; /* Changed */
     }
 
-    .nav-links ul li{  
-        margin: 2rem 0;  /* Changed */
+    /* Nav for Mobile */
+    .mobile-nav{
+        display: contents;
     }
 
-    .nav-links ul li:not(:last-child){
-        margin-right: 0;
-    }
-    
-    .nav-links ul li a{
-        font-size: 20px;
+    /* W3S */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background: #000;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 6rem;
+        text-align: center;
+      }
+
+      
+    .sidenav a {
+        padding: 1rem 0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: rgb(251,99,0);
+        display: block;
+        transition: 0.3s;
         text-transform: uppercase;
         letter-spacing: 1px;
+        font-weight: bold;
+    }
+    
+    .sidenav a:hover {
+        background: rgb(251,99,0);
+        color: #000;
+        margin: 0 8rem;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        font-size: 3rem;
     }
 
-    .nav-links ul li a:hover, #active{
-        border-bottom: none;
+    .openbtn{
+        position: fixed;
+        top: .4rem;
+        right: 12px;
+        color: #000;
+        font-size: 30px;
+        font-weight: bold;
+        padding: .4rem 0 0 0;
     }
-
-    .toggle-btn{
-        display: block;
-    }
-
-    .menu.active{
-        display: block;
-    }
-
+    
     /* Home */
     .heading{
         text-align: center;
     }
 
     .heading h2{
-        padding: 4rem 0 1rem 0;
+        padding: 7rem 0 1rem 0;
         line-height: 2.5rem;
         letter-spacing: 10px;
     }
 
     .heading h1{
-        padding: 1rem 0;
+        padding: 1rem;
         font-size: 3.5rem;
     }
 
     .heading p{
-        padding: 0 0 5rem 0;
+        padding: 0 1rem 5rem 1rem;
     }
 
     /* Top Arrow */
@@ -667,10 +688,13 @@ form button{
 /* For iPads, Tablets */
 @media screen and (min-width:481px) and (max-width:768px){
 
-    
     /* Call */
     .call{
         padding: 1rem 0;
+        position: absolute;
+        top: 4.3rem;
+        left: 0;
+        right: 0;
     }
 
     /* Nav */
@@ -685,39 +709,68 @@ form button{
         margin-left: 0;
     }
 
+    /* Nav for desktop */
     .nav-links{
-        position: absolute;
-        top: 4.2rem;
-        left: 0;
-        right: 0;
-    }
-
-    .nav-links ul{
-        text-align: center;
-        background-color: #000;
         display: none;
     }
 
-    .nav-links ul li{
-        margin: 1.5rem 0;
+     
+    /* Nav for Mobile */
+    .mobile-nav{
+        display: contents;
     }
 
-    .nav-links ul li:not(:last-child){
-        margin-right: 0;
-    }
+    /* W3S */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background: #000;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 6rem;
+        text-align: center;
+      }
 
-    .nav-links ul li a:hover, #active{
-        border-bottom: none;
-    }
-
-    .toggle-btn{
+      
+    .sidenav a {
+        padding: 1rem 0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: rgb(251,99,0);
         display: block;
-    }
-
-    .menu.active{
-        display: block;
+        transition: 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
     }
     
+    .sidenav a:hover {
+        background: rgb(251,99,0);
+        color: #000;
+        margin: 0 12rem;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 12px;
+        font-size: 3rem;
+    }
+
+    .openbtn{
+        position: fixed;
+        top: .4rem;
+        right: 12px;
+        color: #000;
+        font-size: 30px;
+        font-weight: bold;
+        padding: .4rem 0 0 0;
+    }
+       
     /* Home */
     .heading p{
         padding: 0 1rem 10rem 1rem ;
@@ -996,10 +1049,3 @@ form button{
             padding: 1rem;
         }
     }
-
-   /* 320px-480px: Mobile devices
-      481px-768px: iPads, Tablets
-      769px-1024: Small screens, laptops
-      1025px-1200px: Desktops, largescreen
-      1201px and more- Extra large screens, TV*/
-
