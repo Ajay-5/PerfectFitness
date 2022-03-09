@@ -20,10 +20,10 @@
 
     <!-- Call -->
     <div class="call">
-        <a href="tel:+91 9741480375"><i class="fa-solid fa-phone"></i> +91 - 9852591486</a>
+        <a href="tel:+91 0000000000"><i class="fa-solid fa-phone"></i> +91 - 9852591486</a>
     </div>
 
-    <!-- Nav -->
+    <!-- Nav for desktop -->
     <div class="nav-bar" id="top-nav">
 
         <div class="logo">
@@ -39,14 +39,20 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
-
-        <div class="toggle-btn">
-            <a href="#" class="toggle-btn">
-                <i class="fas fa-bars"></i>
-            </a>
-        </div>
-
     </div>
+
+    <!-- Nav for mobile -->
+    <div class="mobile-nav">
+        <div id="mySidenav" class="sidenav">
+            <a href="#void:javascript(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#classes">Classes</a>
+            <a href="#pri">Pricing</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <span class="openbtn" onclick="openNav()">&#9776;</span>
+        </div>
 
     <!-- Home -->
     <div class="heading">
@@ -201,20 +207,16 @@
         <p>| <span>&copy;Perfect Fitness </span>2022. All Rights Reserved |</p>
     </div>
     
-    <!-- JavaScript -->
+    <!-- Javascript -->
     <script>
-        const toggleButton = document.getElementsByClassName('toggle-btn')[0]
-        const menu = document.getElementsByClassName('menu')[0]
-
-        toggleButton.addEventListener('click', () => {
-        menu.classList.toggle('active')
-    })
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "100%";
+        }
         
-        document.querySelectorAll(".menu").forEach(n => n.addEventListener("click", () => {
-        //toggleButton.classList.remove("active");
-        menu.classList.remove("active");
-    }))
-    </script>
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
     
 </body>
 </html>
